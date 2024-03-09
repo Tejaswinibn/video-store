@@ -214,17 +214,17 @@
       },
       {
         "id": 2,
-        "title": "Exposure",
+        "title": "Upcoming Movies",
         "year": "2021",
         "genre": "Genre",
-        "poster": "https://th.bing.com/th/id/OIP.q2UTWS9NCvtPq1BQ8OCmowAAAA?rs=1&pid=ImgDetMain"
+        "poster": "https://i.ytimg.com/vi/8Tzc9nB4l_E/maxresdefault.jpg"
       },
       {
         "id": 2,
         "title": "Jumanji",
         "year": "2021",
         "genre": "Genre",
-        "poster": "images/jumanjii.jpg"
+        "poster": "https://i.ytimg.com/vi/Fv_uDRV61Gs/maxresdefault.jpg"
       }
     ],
     "featured-movies": [
