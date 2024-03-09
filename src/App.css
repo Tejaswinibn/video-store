@@ -1,0 +1,857 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #200f19; /* Dark background for overall app */
+  color: #FFF; /* Default text color set to white for better contrast */
+}
+
+
+a {
+  color: white; /* Ensures all links are white by default */
+  text-decoration: none; /* Removes underline from links */
+}
+
+/* Header */
+header {
+  background-color: #20232a; /* Darker shade for header */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ccc; /* Subtle border for separation */
+}
+header, footer {
+  background-color: #20232a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+/* Header styles */
+header {
+  background-color: #200505; /* Set background color */
+  border-bottom: 1px solid #ccc; /* Add a border at the bottom */
+  padding: 5px; /* Add padding */
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Left navigation styles */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Add spacing between elements */
+}
+
+/* Logo styles */
+.logo {
+  height: 80px; /* Adjust the height of the logo */
+  width: auto; /* Maintain aspect ratio */
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.75); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #181818; /* Dark background for the modal */
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 8px; /* Rounded corners */
+  width: 100%;
+  max-width: 450px; /* Maximum width of the modal */
+}
+
+.login-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-button {
+  border: none;
+  background: none;
+  color: #fff; /* White color for the close button */
+  cursor: pointer;
+  font-size: 1.5rem; /* Size of the close button */
+  transition: transform 0.3s ease-in-out;
+  top: 15px; /* Adjust as necessary */
+  left: 15px; /* Adjust as necessary */
+}
+.close-button:hover {
+  transform: rotate(90deg) scale(1.2); /* Rotate and scale for hover effect */
+}
+.input-field {
+  background-color: #333; /* Slightly lighter than modal background */
+  border: 1px solid #333; /* Border color similar to input background */
+  color: #fff; /* White text color */
+  margin-bottom: 15px; /* Space between fields */
+  padding: 10px 15px; /* Padding inside inputs */
+  width: calc(100% - 30px); /* Width accounting for padding */
+  border-radius: 4px; /* Slightly rounded corners for inputs */
+}
+
+.input-field::placeholder {
+  color: #352929; /* Lighter color for placeholders */
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px; /* Space above the action buttons */
+}
+
+.submit-button, .cancel-button {
+  background-color: #e50914; /* Netflix-like button color */
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase; /* Capitalize button text */
+  font-weight: bold;
+}
+
+.cancel-button {
+  background-color: #333; /* Different color for cancel */
+}
+
+.submit-button:hover, .cancel-button:hover {
+  opacity: 0.9; /* Slight transparency on hover */
+}
+
+/* Add this to ensure inputs don't go outside the modal */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+/* Link styles */
+.nav-link {
+  text-decoration: none;
+  color: #d3cbcb; /* Set link color */
+  font-size: 18px; /* Adjust the font size of the links */
+}
+
+/* Right navigation styles */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Add spacing between buttons */
+}
+
+/* Button styles */
+.nav-button {
+  cursor: pointer;
+  font-size: 16px; /* Adjust the font size of the buttons */
+  background-color: #152b42; /* A bright blue background for the button */
+  color: white; /* White text color for contrast */
+  border: none; /* Remove the default border */
+  padding: 10px 20px; /* Add some padding for a larger clickable area */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transition for background color and transform */
+}
+
+.nav-button:hover, .nav-button:focus {
+  background-color: #0056b3; /* A darker shade of blue for hover and focus states */
+  outline: none; /* Remove the outline to avoid distraction */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px; /* Consistent spacing between nav items */
+}
+
+.logo {
+  height: 80px; /* Adjust as per your logo's aspect ratio */
+}
+
+.nav-link, .nav-button {
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 15px; 
+  border-radius: 5px; 
+  transition: all 0.3s ease; 
+  text-decoration: none; 
+  font-weight: 500; 
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  background-color: transparent; 
+}
+
+.nav-link:hover, .nav-button:hover {
+  background-color: rgba(255, 255, 255, 0.2); /* Subtle background color on hover */
+  color: #EFEFEF; /* Slightly changes the color to give feedback */
+  transform: translateY(-2px); /* Slightly moves up the link/button to give a feeling of action */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Spacing between right-side navigation items */
+}
+
+/* Slider and Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+}
+
+.custom-slider .slick-slide img {
+  width: 100%;
+  height: 80vh; 
+  object-fit: cover; 
+}
+
+.custom-slider .slick-dots li button:before, 
+.custom-slider .slick-dots .slick-active button:before {
+  color: white; /* Dots color */
+}
+
+.custom-slider .slick-prev, .custom-slider .slick-next {
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .custom-slider .slick-slide img {
+    height: 50vh;
+  }
+}
+
+/* Content Sections */
+.content-section-one, .content-section-two {
+  display: flex;
+  align-items: center;
+  background-color: #030c1b; /* Uniform background color for content sections */
+  color: white;
+  padding: 20px;
+  gap: 20px; /* Spacing between elements within the content sections */
+}
+
+/* Cards and Links */
+.movie-card, .tv-show-card {
+  background-color: #333; /* Dark background for cards */
+  border-radius: 5px; /* Rounded corners for cards */
+  overflow: hidden; /* Ensures content fits within the card */
+  color: white; /* Text color for content within the cards */
+  margin: 10px; /* Margin around cards for spacing */
+}
+
+.movie-link, .tv-show-link {
+  display: block;
+  color: white; /* Ensures text color is white for better readability */
+}
+
+.movie-poster, .tv-show-image {
+  width: 100%; /* Ensures image covers the width of the card */
+  height: 300px; /* Fixed height for uniformity */
+  object-fit: cover; /* Cover the area of the card without distorting the image */
+}
+
+/* Forms styling */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+input, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #0056b3;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003d82;
+}
+
+
+
+.form-group {
+  margin-bottom: 25px; /* Slightly increased spacing between fields */
+}
+
+.label {
+  display: block; /* Ensure labels are block level for better spacing */
+  margin-bottom: 8px; /* Space between label and input field */
+  font-size: 16px; /* Adjusted for readability */
+  color: #333; /* Maintained dark color for contrast */
+  font-weight: 600; /* Slightly less bold for a modern look */
+}
+
+.input-field, .submit-button {
+  width: calc(100% - 16px); /* Full width with padding considered */
+  padding: 12px 8px; /* Optimized padding for input and button */
+  border: 2px solid #dee2e6; /* Subtle border color */
+  border-radius: 8px; /* Rounded corners for inputs and button */
+  font-size: 14px; /* Slightly smaller font size for a modern look */
+  box-sizing: border-box; /* Ensures border and padding are included in width */
+}
+
+.input-field:focus {
+  border-color: #0056b3; /* Highlight focus on input fields */
+  outline: none; /* Remove default focus outline */
+}
+
+.submit-button {
+  background-color: #0056b3; /* Primary button color */
+  color: #ffffff; /* Text color for buttons */
+  margin-top: 10px; /* Space above the submit button */
+  cursor: pointer; /* Reiterate cursor pointer for button */
+  font-weight: bold; /* Make button text bold */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.submit-button:hover {
+  background-color: #004085; /* Darker shade on hover for interaction feedback */
+}
+
+.content-section-one,
+.content-section-two {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding: 10px;
+  background-color: #534b4b; /* Set background color */
+  margin: 10px 0; /* Add margin around the sections */
+}
+.content-section-two {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Ensure there's space between the sections */
+}
+
+.content-layout {
+  display: flex;
+  gap: 20px; /* Space between images and interaction section */
+}
+
+.images-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between images */
+}
+
+.spotlight-image {
+  width: 120%; /* Adjust width as necessary */
+  object-fit: cover; /* Ensure images maintain aspect ratio */
+}
+
+.interaction-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between subscribe button, input, and submit button */
+}
+
+.subscribe-button, .submit-review {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #007bff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.subscribe-button:hover, .submit-review:hover {
+  background-color: #0056b3;
+}
+
+.review-input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ccc;
+  resize: vertical; /* Allows the user to resize the input vertically */
+}
+
+/* Add more styles as needed */
+
+
+.tv-show-details-container {
+  color: white;
+  background-color: #333; /* Dark background for contrast */
+  padding: 20px;
+  max-width: 800px; /* Adjust based on your layout */
+  margin: 20px auto; /* Center the container */
+  border-radius: 10px; /* Soft rounded corners */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
+.tv-show-details-container h2 {
+  color: #E50914; /* Bright color for the title */
+  margin-bottom: 10px;
+}
+
+.tv-show-meta p {
+  margin: 5px 0; /* Small margin for metadata */
+}
+
+.tv-show-poster,.movie-poster-container {
+  width: 100%; /* Full width of the container */
+  max-width: 400px; /* Adjust as needed */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Slightly rounded corners for the image */
+  margin-top: 20px;
+  align-items: center;
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .tv-show-details-container,.movie-poster-container {
+    padding: 10px;
+    margin: 10px;
+  }
+}
+ /* App.css */
+
+.movie-poster-container {
+  position: relative;
+  display: inline-block; /* Allows for positioning buttons inside the container */
+}
+
+.movie-poster {
+  width: 100%; /* Adjust based on your preference */
+  max-width: 250px; /* Resize poster image */
+  height: auto;
+  display: block; /* Prevents bottom margin/padding on images */
+}
+
+button {
+  position: relative;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #007bff; /* Button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8; /* Slightly transparent */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+  width:125px;
+}
+
+button:hover {
+  opacity: 1; /* Fully opaque on hover */
+  transform: translateY(-5px); /* Slight lift effect */
+}
+
+.rent-button {
+  bottom: 40px; /* Adjust distance from the bottom */
+}
+
+.purchase-button {
+  bottom: 1px; /* Adjust distance from the bottom */
+}
+
+
+.video-background-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Prevent interaction with the video */
+  opacity: 0.5; /* Adjust opacity for less visibility */
+}
+
+.content-section-two {
+  position: relative;
+  height: 400px; /* Adjust based on your needs */
+  overflow: hidden; /* Ensures the video doesn't exceed the section */
+}
+
+ 
+/* ContentSectionOne.css */
+.content-section-one ,.content-section-two{
+  display: flex;
+  align-items: center;
+  background-color: #121213; /* Adjust background color as needed */
+  color: white;
+  padding: 20px;
+}
+
+.actor-spotlight {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.actor-image img {
+  max-width: 40%; /* Adjust width as needed */
+  height: auto;
+  margin-right: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.actor-image img:hover {
+  transform: scale(1.55); /* Scales up the element slightly */
+  filter: brightness(1.2); /* Makes the element brighter */
+}
+.actor-description {
+  max-width: 60%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  /* If you need to add more styles to your text content, do it here */
+}
+.actor-description:hover {
+  transform: scale(0.05); /* Scales up the element slightly */
+  filter: brightness(0.9); /* Makes the element brighter */
+}
+@media (max-width: 768px) {
+  .actor-spotlight {
+    flex-direction: column;
+  }
+
+  .actor-image img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .actor-description {
+    max-width: 100%;
+  }
+}
+
+.content-section-one img ,.content-section-two img{
+  width: 200px; /* Adjust width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.content-section-one h2,
+.content-section-two h2 {
+  margin: 0 0 20px; /* Add margin below the heading */
+  color: #9c9494; /* Set text color */
+}
+/* MovieCard.css */
+
+
+.movie-title {
+  margin-left: 5px; /* Adjust margin as needed */
+  text-align: center; /* Center-align the title */
+}
+
+
+/* MovieDetails.css */
+.movie-poster-container {
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scale and shadow */
+  display: inline-block; /* To enable transform scaling */
+}
+
+.movie-poster-container:hover .movie-poster {
+  transform: scale(1.05); /* Slightly enlarge the image */
+  box-shadow: 0 8px 16px rgba(0,0,0,0.5); /* Add depth with shadow */
+}
+
+/* MoviesPage.css */
+/* TV Show Details Styling */
+.tv-show-details-container,.movie-poster-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f3eeee;
+  padding: 20px;
+  background-color: #333; /* Dark background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px auto;
+  max-width: 600px; /* Consistent width */
+}
+
+.tv-show-poster-container {
+  margin-top: 20px;
+}
+
+.tv-show-poster {
+  width: 200px; /* Consistent width for images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for the image */
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.tv-show-poster:hover {
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Movies Grid Styling with Hover Effects */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  color: white; /* Ensures text is white for readability */
+}
+
+.movies-grid h1, .movies-grid h2, .movies-grid h3, .movies-grid h4, .movies-grid h5, .movies-grid h6 {
+  color: white; /* Ensures headings are white */
+}
+
+.movie-card {
+  background-color: #20232a; /* Dark background for cards */
+  border-radius: 10px; /* Rounded corners for cards */
+  padding: 10px;
+  transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.movie-card:hover {
+  transform: translateY(-10px); /* Move up slightly on hover */
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.3); /* Shadow effect for depth */
+}
+
+.movie-poster {
+  border-radius: 10px; /* Rounded corners for images */
+  width: 100%; /* Ensure image covers card width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Featured TV shows container */
+.featured-tvshows-container {
+  width:100%;
+  height:30%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  justify-content: space-around; /* Align items with space around them */
+  color:#ccc;
+}
+/* Featured TV shows hovering effect */
+.featured-tvshows-container :hover {
+  transform: scale(1.05); /* Increase size on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+/* Featured movies container hovering effect */
+.featured-movies-container:hover {
+  transform: scale(1.05); /* Increase size on hover */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+
+.featured-movies-container {
+  width: 100%; /* Adjust width as needed */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  justify-content: center; /* Center the items horizontally */
+}
+
+/* Featured movie image */
+.featured-movie-image {
+  width: 200px; /* Adjust width of each image */
+  height: auto; /* Maintain aspect ratio */
+  margin: 10px; /* Add some margin between images */
+  border-radius: 5px; /* Optional: adds rounded corners */
+  overflow: hidden; /* Hide overflowing content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Featured movie title */
+.featured-movie-title {
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Featured movies container hovering effect */
+.featured-movie-image:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+
+
+/* TV shows grid */
+.tvshows-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 20px; /* Add spacing between items */
+  justify-content: center; /* Center items horizontally */
+}
+
+/* TV show card */
+.tvshow {
+  width: 200px; /* Adjust based on your design */
+  text-align: center; /* Center text */
+}
+
+.tvshow img {
+  width: 100%; /* Make image fill container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Add rounded corners */
+}
+
+.tvshow h3 {
+  margin-top: 5px; /* Add margin to separate title from image */
+  font-size: 16px; /* Adjust font size */
+}
+.tv-shows-container {
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.tv-shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.tv-show-card {
+  background-color: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.tv-show-image {
+  width: 100%;
+  height: 300px; /* Set a fixed height for consistency */
+  object-fit: cover; /* This will ensure the image covers the area, might crop */
+}
+
+.tv-show-link {
+  color: white;
+  text-decoration: none;
+  display: block; /* Makes the whole area clickable */
+}
+
+.tv-show-link:hover {
+  opacity: 0.8;
+}
+
+.tv-show-link h3 {
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+/* Footer.css */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-app-stores {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Aligns the badges vertically */
+  padding-bottom: 20px;
+}
+
+.footer-app-stores .store-badge img {
+  height: 50px; /* Adjusts the height for all badges */
+  width: auto; /* Maintains the aspect ratio */
+  margin: 0 12px; /* Spacing between badges */
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-around; /* This spreads out your columns */
+  width: 100%; /* Ensures the columns take up the full width of the footer */
+  max-width: 1200px; /* Sets a maximum width for larger screens */
+  margin-top: 20px; /* Adds space between the store badges and the columns */
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer-column ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  padding: 5px 0;
+}
+
+.footer-social-media {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.social-icon {
+  font-size: 24px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.social-icon:hover {
+  opacity: 0.7;
+}
+
+/* Media query for responsive adjustments */
+@media (max-width: 768px) {
+  .footer-app-stores {
+    flex-direction: column;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
+.site-footer {
+  padding: 20px;
+  background-color: #282c34; /* Dark background for contrast */
+  color: #fff;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust spacing between elements */
+}
+
+.footer-column {
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+
+

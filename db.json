@@ -1,0 +1,313 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Shawshank Redemption",
+      "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
+      "poster": "/images/shawshank.jpeg",
+      "rentPrice": "2.99",
+      "purchasePrice": "9.99"
+    },
+    {
+      "id": 2,
+      "title": "Matrix",
+      "year": "1999",
+      "genre": "Action, Sci-Fi",
+      "poster": "/images/matrix.jpg",
+      "synopsis": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "rentPrice": "2.49",
+      "purchasePrice": "8.99"
+    },
+    {
+      "id": 3,
+      "title": "Interstellar",
+      "year": "2014",
+      "genre": "Adventure, Drama, Sci-Fi",
+      "poster": "/images/interstellar.jpeg",
+      "synopsis": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "rentPrice": "3.49",
+      "purchasePrice": "10.99"
+    },
+    {
+      "id": 4,
+      "title": "The Dark Knight",
+      "year": "2008",
+      "genre": "Action, Crime, Drama",
+      "poster": "/images/dark.jpeg",
+      "synopsis": "When the menace known as The Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "rentPrice": "2.99",
+      "purchasePrice": "9.99"
+    },
+    {
+      "id": 5,
+      "title": "Inception",
+      "year": "1994",
+      "genre": "Drama",
+      "poster": "/images/inception2.jpeg",
+      "synopsis": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "rentPrice": "2.49",
+      "purchasePrice": "8.99"
+    },
+    {
+      "id": 6,
+      "title": "The Godfather",
+      "year": "1972",
+      "genre": "Crime, Drama",
+      "poster": "/images/godfather.jpeg",
+      "synopsis": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
+      "rentPrice": "2.99",
+      "purchasePrice": "9.99"
+    },
+    {
+      "id": 7,
+      "title": "12 Angry Men",
+      "year": "1957",
+      "genre": "Crime, Drama",
+      "poster": "/images/angrymen.jpeg",
+      "synopsis": "A jury holdout attempts to prevent a miscarriage of justice by forcing his colleagues to reconsider the evidence.",
+      "rentPrice": "2.49",
+      "purchasePrice": "8.99"
+    },
+    {
+      "id": 8,
+      "title": "Schindler's List",
+      "year": "1993",
+      "genre": "Biography, Drama, History",
+      "poster": "/images/schindler.jpg",
+      "synopsis": "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+      "rentPrice": "3.99",
+      "purchasePrice": "12.99"
+    },
+    {
+      "id": 9, 
+      "title": "Forrest Gump",
+      "year": "1994",
+      "genre": "Drama, Romance",
+      "poster": "/images/forest.jpeg",
+      "synopsis": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "rentPrice": "2.99",
+      "purchasePrice": "9.99"
+    },
+    {
+      "id": 10, 
+      "title": "Barbie",
+      "year": "2023",
+      "genre": "Drama, Romance",
+      "poster": "/images/barbie2023.jpeg",
+      "synopsis": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "rentPrice": "2.99",
+      "purchasePrice": "9.99"
+    },
+    {
+      "id": 11, 
+      "title": "BarSpider-Man: Across the Spider-Verse poserbie",
+      "year": "2023",
+      "genre": "Drama, Romance",
+      "poster": "/images/spiderman.jpg",
+      "synopsis": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "rentPrice": "2.99",
+      "purchasePrice": "9.99"
+    },{
+      "id": 12, 
+      "title": "oppenheimer",
+      "year": "2023",
+      "genre": "Drama, Romance",
+      "poster": "/images/oppen.jpeg",
+      "synopsis": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "rentPrice": "2.99",
+      "purchasePrice": "9.99"
+    }
+    ],
+    "tvshows": [
+      {
+        "id": 1,
+        "title": "The Witcher",
+        "year": "2019",
+        "genre": "Action, Adventure, Fantasy",
+        "poster": "/images/witcher.jpeg"
+      },
+      {
+        "id": 2,
+        "title": "Stranger Things",
+        "year": "2016",
+        "genre": "Drama, Fantasy, Horror",
+        "poster": "/images/inception.jpeg"
+      },
+      {
+        "id": 3,
+        "title": "The Mandalorian",
+        "year": "2019",
+        "genre": "Action, Adventure, Fantasy",
+        "poster": "/images/mandalorian.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Breaking Bad",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/breakingbad.jpeg"
+      },
+      {
+        "id": 5,
+        "title": " Game Of Thrones",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/got.jpeg"
+      },
+      {
+        "id": 6,
+        "title": "Crown",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/crown.jpeg"
+      },
+      {
+        "id": 7,
+        "title": "FRIENDS",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/friends.jpeg"
+      },
+      {
+        "id": 8,
+        "title": "Bridgerton",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/bridgerton.jpeg"
+      },
+      {
+        "id": 9,
+        "title": "SUITS",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/SUITS.jpeg"
+      },
+      {
+        "id": 10,
+        "title": "Start-Up",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/startup.jpeg"
+      },
+      {
+        "id": 11,
+        "title": "Bridgerton",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/bridgerton.jpeg"
+      },
+      {
+        "id": 12,
+        "title": "Emily in Paris",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "/images/emilyy.jpeg"
+      }
+    ],
+    "top-movies-2021": [
+      {
+        "id": 1,
+        "title": "Oppenheimer",
+        "year": "2021",
+        "genre": "Genre",
+        "poster": "/images/oppenheimer-featured.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Exposure",
+        "year": "2021",
+        "genre": "Genre",
+        "poster": "images/exposure.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Jumanji",
+        "year": "2021",
+        "genre": "Genre",
+        "poster": "images/jumanjii.jpg"
+      }
+    ],
+    "featured-movies": [
+      {
+        "id": 1,
+        "title": "Inception",
+        "year": "2010",
+        "genre": "Action, Adventure, Sci-Fi",
+        "poster": "images/inception2.jpeg"
+      },
+      {
+        "id": 2,
+        "title": "12 Angry Men",
+        "year": "2014",
+        "genre": "Adventure, Drama, Sci-Fi",
+        "poster": "images/angrymen.jpeg"
+      },
+      {
+        "id": 3,
+        "title": "The Dark Knight",
+        "year": "2008",
+        "genre": "Action, Crime, Drama",
+        "poster": "images/dark.jpeg"
+      },
+      {
+        "id": 4,
+        "title": "Shawshank Redemption",
+        "year": "2008",
+        "genre": "Action, Crime, Drama",
+        "poster": "images/shawshank.jpeg"
+      },
+      {
+        "id": 5,
+        "title": "The Matrix",
+        "year": "1999",
+        "genre": "Action, Sci-Fi",
+        "poster": "images/matrix.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Forrest Gump",
+        "year": "2008",
+        "genre": "Action, Crime, Drama",
+        "poster": "images/forest.jpeg"
+      }
+    ],
+    "featured-tvshows": [
+      {
+        "id": 1,
+        "title": "The Witcher",
+        "year": "2019",
+        "genre": "Action, Adventure, Fantasy",
+        "poster": "images/witcher.jpeg"
+      },
+      {
+        "id": 2,
+        "title": "Stranger Things",
+        "year": "2016",
+        "genre": "Drama, Fantasy, Horror",
+        "poster": "images/stranger.jpeg"
+      },
+      {
+        "id": 3,
+        "title": "Marry My Husband",
+        "year": "2019",
+        "genre": "Action, Adventure, Sci-Fi",
+        "poster": "images/marry.jpeg"
+      },
+      {
+        "id": 4,
+        "title": "Breaking Bad",
+        "year": "2008",
+        "genre": "Crime, Drama, Thriller",
+        "poster": "images/breakingbad.jpeg"
+      },
+      {
+        "id": 5,
+        "title": "Family Guy",
+        "year": "2008",
+        "genre": " Drama, Thriller",
+        "poster": "images/family.jpeg"
+      }
+      
+    ]
+  }
+  
