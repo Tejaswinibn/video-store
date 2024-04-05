@@ -13,7 +13,7 @@ const MoviesPage = () => {
     useEffect(() => {
       const fetchMovies = async () => {
         try {
-          const response = await axios.get('http://localhost:3030/api/movies');
+          const response = await axios.get('https://video-store-ffd8896e8ec4.herokuapp.com/api/movies');
           setMovies(response.data);
         } catch (error) {
           console.error('Failed to fetch movies:', error);
