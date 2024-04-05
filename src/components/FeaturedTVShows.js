@@ -7,7 +7,7 @@ const FeaturedTVShows = () => {
 
   useEffect(() => {
     // Update the URL to match your backend endpoint for fetching featured TV shows
-    fetch(' https://video-store-ffd8896e8ec4.herokuapp.com/api/tvshows/featured')
+    fetch('https://video-store-ffd8896e8ec4.herokuapp.com/api/tvshows/featured')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch featured TV shows');
