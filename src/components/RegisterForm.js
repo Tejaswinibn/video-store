@@ -22,7 +22,7 @@ const RegisterForm = ({ onClose }) => {
     }
 
     try {
-      const response = await axios.post('http://localhost:3030/api/customers/register', {
+      const response = await axios.post('https://video-store-ffd8896e8ec4.herokuapp.com/api/customers/register', {
         username, 
         email,
         password,
