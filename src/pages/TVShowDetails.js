@@ -6,7 +6,7 @@ const TVShowDetailsPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3030/api/tvshows/${id}`)
+    fetch(`https://video-store-ffd8896e8ec4.herokuapp.com/api/tvshows/${id}`)
       .then(response => response.json())
       .then(data => setTvShow(data))
       .catch(error => console.error('Error fetching TV show details:', error));
