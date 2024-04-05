@@ -13,7 +13,7 @@ const SearchBox = () => {
     event.preventDefault();
     try {
       // Assuming your API returns the full details of a single movie for a given title
-      const response = await fetch(`http://localhost:3030/api/movies/search?title=${encodeURIComponent(query)}`);
+      const response = await fetch(` https://video-store-ffd8896e8ec4.herokuapp.com/api/movies/search?title=${encodeURIComponent(query)}`);
       if (!response.ok) {
         throw new Error('Failed to fetch movie details');
       }
