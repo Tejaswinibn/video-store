@@ -10,7 +10,7 @@ const ProfilePage = () => {
   useEffect(() => {
     const customerId = localStorage.getItem('customerId');
     if (customerId) {
-      fetch(`http://localhost:3030/api/customers/${customerId}`)
+      fetch(`https://video-store-ffd8896e8ec4.herokuapp.com/api/customers/authenticate/api/customers/${customerId}`)
         .then(response => {
           if (!response.ok) {
             throw new Error(`Failed to fetch customer information for ID: ${customerId}`);
