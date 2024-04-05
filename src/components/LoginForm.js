@@ -13,7 +13,7 @@ const LoginForm = ({ onLoginSuccess }) => {
     event.preventDefault();
     setLoginError('');
     try {
-      const response = await axios.post('http://localhost:3030/api/customers/authenticate', {
+      const response = await axios.post('https://video-store-ffd8896e8ec4.herokuapp.com/api/customers/authenticate', {
         email,
         password,
       });
