@@ -6,7 +6,7 @@ const FeaturedMovies = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('http://localhost:3030/api/movies/featured')
+    fetch('https://video-store-ffd8896e8ec4.herokuapp.com/api/movies/featured')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch featured movies');
