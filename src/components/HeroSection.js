@@ -7,18 +7,12 @@ const HeroSection = () => {
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/top-movies-2021')
+    fetch('http://localhost:3030/api/movies/top')
       .then((response) => response.json())
-      .then((data) => {
-        const transformedData = data.map(item => ({
-          id: item.id,
-          image: item.poster, 
-          title: item.title
-        }));
-        setSlides(transformedData);
-      })
+      .then((data) => setSlides(data))
       .catch((error) => console.log(error));
   }, []);
+  
 
   const settings = {
     dots: true,
@@ -34,8 +28,8 @@ const HeroSection = () => {
       <Slider {...settings} className="custom-slider">
         {slides.map((slide) => (
           <div key={slide.id}>
-            <img src={slide.image} alt={slide.title} className="slide-image" />
-            <h3>{slide.title}</h3> 
+            <img src={slide.poster} alt={slide.title} className="slide-image" />
+            
           </div>
         ))}
       </Slider>

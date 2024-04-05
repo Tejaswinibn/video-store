@@ -3,18 +3,8 @@ import { MdPlayArrow, MdPause } from 'react-icons/md'; // Import play and pause 
 import '../App.css';
 
 const ContentSectionTwo = () => {
-  const [userReview, setUserReview] = useState('');
   const [isPlaying, setIsPlaying] = useState(false); // State to track play status
   const videoRef = useRef(null); // Reference to the video iframe
-
-  const handleReviewChange = (event) => {
-    setUserReview(event.target.value);
-  };
-
-  const handleSubmitReview = () => {
-    console.log("User Review Submitted:", userReview);
-    setUserReview(''); // Reset the review input after submit
-  };
 
   // Toggle play/pause state
   const togglePlay = () => {
@@ -26,7 +16,9 @@ const ContentSectionTwo = () => {
     if (!isPlaying) {
       iframe.src += "&autoplay=1"; // Play the video
     } else {
-      iframe.src = iframeSrc.replace("&autoplay=1", ""); // Pause the video
+      // Attempt to pause the video might not work due to restrictions from YouTube in an iframe
+      // Resetting the src is a workaround, but it stops the video and resets it to the beginning
+      iframe.src = iframeSrc.replace("&autoplay=1", ""); 
     }
   };
 
@@ -48,20 +40,8 @@ const ContentSectionTwo = () => {
           className="video-background"
         ></iframe>
       </div>
-      <div className="content-layout">
-        <div className="images-container">
-          <img src="/images/argylle.jpeg" alt="Cinema Spotlight" className="spotlight-image" />
-        </div>
-        <div className="interaction-section">
-          <button className="subscribe-button">Purchase</button>
-          <textarea
-            value={userReview}
-            onChange={handleReviewChange}
-            placeholder="Leave a review..."
-            className="review-input"
-          ></textarea>
-          <button onClick={handleSubmitReview} className="submit-review">Submit Review</button>
-        </div>
+      <div className="images-container">
+        <img src="/images/argylle.jpeg" alt="Cinema Spotlight" className="spotlight-image" />
       </div>
     </div>
   );

@@ -1,47 +1,65 @@
 import React, { useState } from 'react';
-import { MdClose } from 'react-icons/md'; // Import the close icon
-import '../App.css'; // Assuming your CSS styles are here
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import '../App.css';
 
-const LoginForm = ({ onClose }) => {
-  const [username, setUsername] = useState('');
+const LoginForm = ({ onLoginSuccess }) => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginError, setLoginError] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    onClose(); // Close the modal after submission
+    setLoginError('');
+    try {
+      const response = await axios.post('http://localhost:3030/api/customers/authenticate', {
+        email,
+        password,
+      });
+      console.log("Authentication successful", response.data);
+
+      if (onLoginSuccess) {
+        const customerId = response.data.customer.id;
+        onLoginSuccess(customerId); // Pass the customer ID to onLoginSuccess
+        console.log(customerId);
+      }
+      
+      navigate('/profile'); // Navigate to the profile page
+
+    } catch (error) {
+      console.error('Error logging in:', error);
+      setLoginError('Failed to log in. Please check your credentials and try again.');
+    }
   };
 
   return (
-    <div className="login-form" style={{position: 'relative'}}>
-     
-        <MdClose className="close-button" onClick={onClose} /> {/* Use MdClose icon as the close button */}
-      
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="text"
-            id="username"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <input
-            type="password"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-actions">
-          <button type="submit">Log In</button>
-          <button type="button" onClick={onClose}>Cancel</button>
-        </div>
-      </form>
+    <div className="login-page">
+      <div className="login-container">
+        <h1>Sign In</h1>
+        {loginError && <div className="login-error">{loginError}</div>}
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="input-group">
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="input-group">
+            <input
+              type="password"
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="login-button">Sign In</button>
+        </form>
+      </div>
     </div>
   );
 };

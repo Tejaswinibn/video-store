@@ -6,7 +6,7 @@ const TVShowDetailsPage = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:3001/tvshows/${id}`)
+    fetch(`http://localhost:3030/api/tvshows/${id}`)
       .then(response => response.json())
       .then(data => setTvShow(data))
       .catch(error => console.error('Error fetching TV show details:', error));
@@ -20,8 +20,7 @@ const TVShowDetailsPage = () => {
     <div className="tv-show-details-container">
       <h2>{tvShow.title}</h2>
       <div className="tv-show-meta">
-        <p>Year: {tvShow.year}</p>
-        <p>Genre: {tvShow.genre}</p>
+        <p>Synopsis: {tvShow.synopsis}</p>
         <img src={tvShow.poster} alt={tvShow.title} className="tv-show-poster"/>
        
       </div>

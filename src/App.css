@@ -1,8 +1,3 @@
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #200f19; /* Dark background for overall app */
-  color: #FFF; /* Default text color set to white for better contrast */
-}
 
 
 a {
@@ -38,12 +33,7 @@ header {
   padding: 5px; /* Add padding */
 }
 
-/* Navigation styles */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 /* Left navigation styles */
 .nav-left {
@@ -51,7 +41,11 @@ nav {
   align-items: center;
   gap: 10px; /* Add spacing between elements */
 }
-
+.movie-video {
+  margin-left: 20px; /* Adds some space between the poster and the video */
+  border: none; /* Removes the frame border */
+  margin-top: 50px;
+}
 /* Logo styles */
 .logo {
   height: 80px; /* Adjust the height of the logo */
@@ -78,69 +72,65 @@ nav {
   max-width: 450px; /* Maximum width of the modal */
 }
 
-.login-form-header {
+.login-page {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #000;
 }
 
-.close-button {
-  border: none;
-  background: none;
-  color: #fff; /* White color for the close button */
-  cursor: pointer;
-  font-size: 1.5rem; /* Size of the close button */
-  transition: transform 0.3s ease-in-out;
-  top: 15px; /* Adjust as necessary */
-  left: 15px; /* Adjust as necessary */
-}
-.close-button:hover {
-  transform: rotate(90deg) scale(1.2); /* Rotate and scale for hover effect */
-}
-.input-field {
-  background-color: #333; /* Slightly lighter than modal background */
-  border: 1px solid #333; /* Border color similar to input background */
-  color: #fff; /* White text color */
-  margin-bottom: 15px; /* Space between fields */
-  padding: 10px 15px; /* Padding inside inputs */
-  width: calc(100% - 30px); /* Width accounting for padding */
-  border-radius: 4px; /* Slightly rounded corners for inputs */
+.login-container {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+  width: 300px;
 }
 
-.input-field::placeholder {
-  color: #352929; /* Lighter color for placeholders */
+.login-container h1 {
+  color: #e50914;
+  margin-bottom: 20px;
 }
 
-.form-actions {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 15px; /* Space above the action buttons */
-}
-
-.submit-button, .cancel-button {
-  background-color: #e50914; /* Netflix-like button color */
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
   border-radius: 4px;
+  border: 1px solid #333;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #e50914;
+  border: none;
+  border-radius: 4px;
+  color: white;
   cursor: pointer;
-  text-transform: uppercase; /* Capitalize button text */
-  font-weight: bold;
 }
 
-.cancel-button {
-  background-color: #333; /* Different color for cancel */
+.login-button:hover {
+  background-color: #f40612;
 }
 
-.submit-button:hover, .cancel-button:hover {
-  opacity: 0.9; /* Slight transparency on hover */
+.login-error {
+  color: #ffa00a;
+  margin-bottom: 15px;
 }
 
-/* Add this to ensure inputs don't go outside the modal */
-input[type="text"],
-input[type="password"],
-input[type="email"] {
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+.register-link {
+  color: #b3b3b3;
+  margin-top: 20px;
+}
+
+.register-link span {
+  cursor: pointer;
+  color: #fff;
+}
+
+.register-link span:hover {
+  text-decoration: underline;
 }
 
 
@@ -188,6 +178,76 @@ nav {
 .logo {
   height: 80px; /* Adjust as per your logo's aspect ratio */
 }
+/* App.css */
+
+body, html {
+  height: 100%; /* Make sure the page fills the entire viewport height */
+  margin: 0; /* Reset default margin */
+  font-family: 'Arial', sans-serif;
+  background-color: #200f19; /* Dark background for overall app */
+  color: #FFF; /* Default text color set to white for better contrast */
+}
+
+.login-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Use 100% viewport height to center vertically */
+  background-color: #f0f0f0; /* Light background color */
+}
+
+.login-container {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 320px; /* Set a max-width for the form */
+}
+
+.login-container h1 {
+  color: #333;
+  margin-bottom: 24px; /* Give some spacing below the title */
+  text-align: center; /* Center the title */
+}
+
+.input-group {
+  margin-bottom: 20px; /* Space out the inputs */
+}
+
+.input-group input {
+  width: calc(100% - 20px); /* Full width minus padding */
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd; /* Subtle border color */
+}
+
+.login-button {
+  width: 100%; /* Full width button */
+  padding: 10px;
+  border-radius: 4px;
+  border: none;
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:hover {
+  background-color: #003d82; /* Darken button on hover */
+}
+
+.login-error {
+  color: #d9534f; /* Error color */
+  background-color: #f2dede;
+  padding: 10px;
+  margin-bottom: 20px; /* Space before the input fields */
+  border-radius: 4px;
+  text-align: center; /* Center the text in the error box */
+}
+
+/* Add other styles you feel necessary */
 
 .nav-link, .nav-button {
   color: white;
@@ -203,7 +263,7 @@ nav {
 }
 
 .nav-link:hover, .nav-button:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Subtle background color on hover */
+  background-color:#34495e; /* Subtle background color on hover */
   color: #EFEFEF; /* Slightly changes the color to give feedback */
   transform: translateY(-2px); /* Slightly moves up the link/button to give a feeling of action */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -255,13 +315,12 @@ nav {
   gap: 20px; /* Spacing between elements within the content sections */
 }
 
-/* Cards and Links */
-.movie-card, .tv-show-card {
-  background-color: #333; /* Dark background for cards */
-  border-radius: 5px; /* Rounded corners for cards */
-  overflow: hidden; /* Ensures content fits within the card */
-  color: white; /* Text color for content within the cards */
-  margin: 10px; /* Margin around cards for spacing */
+
+.movies-grid,.tv-shows-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust 'minmax' values as needed */
+  grid-gap: 20px; /* This is the space between each card */
+  padding: 20px; /* Padding inside the grid container */
 }
 
 .movie-link, .tv-show-link {
@@ -643,21 +702,7 @@ button:hover {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Featured TV shows container */
-.featured-tvshows-container {
-  width:100%;
-  height:30%;
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap; /* Allow items to wrap */
-  justify-content: space-around; /* Align items with space around them */
-  color:#ccc;
-}
-/* Featured TV shows hovering effect */
-.featured-tvshows-container :hover {
-  transform: scale(1.05); /* Increase size on hover */
-  transition: transform 0.3s ease; /* Smooth transition */
-}
+
 /* Featured movies container hovering effect */
 .featured-movies-container:hover {
   transform: scale(1.05); /* Increase size on hover */
@@ -683,11 +728,6 @@ button:hover {
   transition: transform 0.3s ease; /* Smooth transition */
 }
 
-/* Featured movie title */
-.featured-movie-title {
-  text-align: center;
-  margin-top: 5px;
-}
 
 /* Featured movies container hovering effect */
 .featured-movie-image:hover {
@@ -853,5 +893,205 @@ button:hover {
   transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for hover effects */
 }
 
+/* Container for all movies */
+.featured-movies-container ,.featured-tvshows-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Adjust the gap between cards as needed */
+}
 
+/* Individual flip card styling */
+.flip-card {
+  width: 200px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  perspective: 1000px;
+  margin: 10px;
+}
 
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  border-radius: 10px; /* Optional: if you want rounded corners */
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px; /* Match this to the flip-card-inner if using border-radius */
+}
+
+.flip-card-front {
+  background-color: #bbb; /* Fallback color */
+  color: black;
+  overflow: hidden; /* To ensure content fits well inside the card */
+}
+
+.flip-card-back {
+  background-color: #081116;
+  color: white;
+  transform: rotateY(180deg);
+  overflow: hidden; /* To ensure content fits well inside the card */
+}
+
+/* Style for the image on the front of the card */
+.featured-movie-image,.featured-tvshow-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px 10px 0 0; /* Optional: if you want rounded corners */
+}
+.register-form {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  position: relative;
+}
+
+.register-form h2 {
+  color: #333;
+  text-align: center;
+}
+
+.register-form input {
+  width: calc(100% - 20px);
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.register-form .form-actions {
+  text-align: center;
+  padding-top: 20px;
+}
+
+button {
+  background-color: #5CDB95; /* A fresh green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.nav-right .nav-link svg {
+  fill: white; /* Change the fill color to white or any other color that contrasts with the brown background */
+}
+button:hover {
+  background-color: #379683; /* A darker shade for hover state */
+}
+
+button:active {
+  transform: scale(0.98); /* Slightly shrink the buttons when clicked */
+}
+/* ProfilePage.css */
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-family: 'Arial', sans-serif;
+}
+
+.welcome-message {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.customer-info, .movie-info {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.customer-info p, .movie-info p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.movie-info h2 {
+  color: #333;
+  margin-top: 1rem;
+}
+
+.icon {
+  height: 24px; /* Adjust the size as needed */
+  width: 24px;  /* Adjust the size as needed */
+  fill: #333;   /* Choose a color that stands out against your nav background */
+}
+.synopsis-container {
+  text-align: center; /* Centers the text inside the container */
+  margin: auto; /* If you want to center the container itself horizontally */
+  max-width: 800px; /* Or whatever maximum width you prefer */
+  padding: 1rem; /* Adds some space inside the container */
+}
+.synopsis-container p {
+  line-height: 1.6; /* Makes the text easier to read by increasing the space between lines */
+  color: #ece5e5; /* Dark grey color for the text, which is generally easier to read */
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin-bottom: 1rem; /* Adds space below the paragraph if there are multiple paragraphs */
+  white-space: pre-wrap; /* Preserves whitespace and line breaks in the text */
+}
+
+.loading, .error, .not-found {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+.error-message, .success-message {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #388e3c; /* Green color for success message */
+}
+
+.error-message {
+  color: #d32f2f; /* Red color for error message */
+}
+
+/* Simple animation for the form appearance */
+@keyframes slideUpFadeIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.register-form {
+  animation: slideUpFadeIn 0.5s ease-out forwards;
+}
