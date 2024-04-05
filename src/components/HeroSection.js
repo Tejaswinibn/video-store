@@ -7,7 +7,7 @@ const HeroSection = () => {
   const [slides, setSlides] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3030/api/movies/top')
+    fetch(' https://video-store-ffd8896e8ec4.herokuapp.com/api/movies/top')
       .then((response) => response.json())
       .then((data) => setSlides(data))
       .catch((error) => console.log(error));
