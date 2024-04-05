@@ -7,7 +7,7 @@ const MovieDetails = () => {
   const { id } = useParams(); // Ensure id is extracted correctly
 
   useEffect(() => {
-    fetch(`http://localhost:3030/api/movies/${id}`)
+    fetch(`https://video-store-ffd8896e8ec4.herokuapp.com/api/movies/${id}`)
       .then(response => response.json())
       .then(data => setMovie(data))
       .catch(error => console.error('Error fetching movie details:', error));
