@@ -11,7 +11,7 @@ const TVShowsPage = () => {
   useEffect(() => {
     const fetchTVShows = async () => {
       try {
-        const response = await axios.get('http://localhost:3030/api/tvshows');
+        const response = await axios.get('https://video-store-ffd8896e8ec4.herokuapp.com/api/tvshows');
         setTvShows(response.data);
       } catch (error) {
         console.error('Failed to fetch TV shows:', error);
