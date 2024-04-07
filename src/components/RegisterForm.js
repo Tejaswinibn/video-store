@@ -4,7 +4,9 @@ import "../App.css";
 import axios from 'axios';
 
 const RegisterForm = ({ onClose }) => {
-  const [username, setUsername] = useState('');
+  // Inside your RegisterForm component's state initialization
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -22,8 +24,9 @@ const RegisterForm = ({ onClose }) => {
     }
 
     try {
-      const response = await axios.post('https://video-store-ffd8896e8ec4.herokuapp.com/api/customers/register', {
-        username, 
+      const response = await axios.post('http://localhost:3030/api/customers/register', {
+        firstName, 
+        lastName,
         email,
         password,
       });
@@ -48,18 +51,29 @@ const RegisterForm = ({ onClose }) => {
       <form onSubmit={handleSubmit}>
         <h2>Register</h2>
         {showSuccessMessage && (
-  <p className="success-message" style={{ color: 'black' }}>Registration successful!</p>
-)}
+          <p className="success-message" style={{ color: 'black' }}>Registration successful!</p>
+        )}
         {error && <p className="error-message">{error}</p>}
+        {/* Inside the form in your RegisterForm component */}
         <div>
           <input
             type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
+            placeholder="First Name"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
             required
           />
         </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Last Name"
+            value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
+            required
+          />
+        </div>
+
         <div>
           <input
             type="email"
